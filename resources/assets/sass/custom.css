@@ -1,0 +1,114 @@
+.jumbotron{
+	background-color: #000;
+	height:300px;
+	width:100%;
+}
+
+.dashboard{
+	margin-top:75px;
+}
+.menupanel{
+	width:700px;
+	margin:0 auto;
+}
+.menu a:link
+{
+color:#ffffff;
+}
+
+.menu a:hover
+{
+color:green;
+}
+.menu a:visited {
+   color: #ffffff;
+}
+
+.glyphicon-lg{font-size:3em}
+.glyphicon-md{font-size:3em;}
+.blockquote-box{border-right:5px solid #E6E6E6;margin-bottom:25px}
+.blockquote-box .square{width:100px;min-height:50px;margin-right:22px;text-align:center!important;background-color:#E6E6E6;padding:20px 0}
+.blockquote-box.blockquote-primary{border-color:#357EBD}
+.blockquote-box.blockquote-primary .square{background-color:#428BCA;color:#FFF}
+.blockquote-box.blockquote-success{border-color:#4CAE4C}
+.blockquote-box.blockquote-success .square{background-color:#5CB85C;color:#FFF}
+.blockquote-box.blockquote-info{border-color:#46B8DA}
+.blockquote-box.blockquote-info .square{background-color:#5BC0DE;color:#FFF}
+.blockquote-box.blockquote-warning{border-color:#EEA236}
+.blockquote-box.blockquote-warning .square{background-color:#F0AD4E;color:#FFF}
+.blockquote-box.blockquote-danger{border-color:#D43F3A}
+.blockquote-box.blockquote-danger .square{background-color:#D9534F;color:#FFF}
+.mainmenu{font-size:5em;font-weight:900;}
+
+.pilappheading
+{
+	text-align:center;
+	font-size:2em;
+	font-weight:900;
+}
+
+.pilappsubheading
+{
+	text-align:center;
+	font-size:1em;
+	font-weight:300;
+}
+
+.reginfo
+{
+	width:650px;
+	margin:0 auto;
+	border:3px solid #000;
+	font-size:14px;
+	padding:10px;
+}
+.reginfo h2{
+	font-size:20px;
+	text-align:center;
+	font-weight:600;
+}
+
+.pleasenote
+{
+	width:650px;
+	font-size:14px;
+	margin:0 auto;
+	text-align: justify;
+}
+.ol
+{
+	 list-style-type: decimal;
+
+}
+
+.li
+{
+margin-bottom: 10px;
+text-align:justify;
+}
+
+.bold
+{
+	font-weight:900;
+	text-decoration:underline;
+}
+
+
+
+.successcontainer
+{
+	background-color:#fff;
+	width:700px;
+	margin:0 auto;
+	margin-top:20px;
+}
+
+
+.pilgrimsuccesstext
+{
+	font-size:12px;
+	text-align:center;
+	width:600px;
+	margin:0 auto;
+	font-weight:bold;
+}
