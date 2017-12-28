@@ -29,13 +29,12 @@ class HomeController extends Controller
         $sponsor_pilgrim_pairs = DB::table('pilgrim_info')
             ->join('sponsor_info', 'pilgrim_info.sponsor_id', '=', 'sponsor_info.sponsor_id')
             ->select('pilgrim_info.pilgrim_id',
-                'pilgrim_info.firstname',
-                'pilgrim_info.lastname',
+                'pilgrim_info.fullname as PI_fullname',
                 'sponsor_info.sponsor_id as sponsor_id',
-                'sponsor_info.fullname'
+                'sponsor_info.fullname as SP_fullname'
             )
             ->get();
 
-        return view('dashboard')->with(compact('sponsor_pilgrim_pairs'));
+        return view('pastor/pastordashboard')->with(compact('sponsor_pilgrim_pairs'));
     }
 }
