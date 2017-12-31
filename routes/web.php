@@ -19,6 +19,7 @@ Auth::routes();
 
 //Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
+Route::get('admin','registrarControllers\RegistrarController@RegistrarPilgrimList')->middleware('registrar');
 
 
 Route::prefix('admin')->group(function() {
@@ -53,15 +54,12 @@ Route::prefix('')->group(function() {
 });
 
 //Routes for Inserting into pastor_info table
+//Routes for Inserting into pastor_info table
 Route::prefix('')->group(function() {
   Route::get('pastor/pastorapp', 'pastorControllers\PastorApp@pastorapp')->middleware('pastor');
   Route::post('pastor/insert','pastorControllers\PastorInsertController@insert')->middleware('pastor');
   Route::get('pastor/pastorappsuccess','pastorControllers\PastorApp@pastorappsuccess')->middleware('pastorappsuccess');
-  Route::get('pastor/pastorappsuccess/{pastorId}','pastorControllers\PastorApp@pastorappsuccess')->middleware('pastorappsuccess');
-  Route::get('/pastor/pastordashboard', function () {
-      return view('pastor/pastordashboard');
-  });
-  Route::get('/pastor/pastorapprovals', function () {
-      return view('pastor/pastorapprovals');
-  });
+  Route::get('pastor/pastordashboard','pastorControllers\PastorApp@pastordashboard')->middleware('pastorappsuccess');
+  Route::get('pastor/pastorappsuccess/{pilgrimId}','pastorControllers\PastorApp@pastorappsuccess')->middleware('pastorappsuccess');
+
 });
