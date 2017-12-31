@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<h3>Pilgrim info:</h3>
-{{ $pilgrim_info->firstname }}
-<h3>Sponsor Info:</h3>
-{{ $sponsor_info->fullname }}
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -14,6 +13,23 @@
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="/pastor/insert">
                         {{ csrf_field() }}
+
+                        <div class="form-group">
+                            <label for="fullname" class="col-md-4 control-label">Pilgrim Information:</label>
+
+                            <div class="col-md-6">
+                              <span style="font-size:14px;font-weight:bold">{{ $pilgrim_info->fullname }}</span> <br/>
+                              <span style="font-size:14px;">{{ $pilgrim_info->reasontoattend}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullname" class="col-md-4 control-label">Sponsor Information:</label>
+
+                            <div class="col-md-6">
+                              <span style="font-size:14px;font-weight:bold">{{ $sponsor_info->fullname }}</span> <br />
+                              <span style="font-size:14px;">{{ $sponsor_info->goodcandidatereason}}</span>
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('fullname') ? ' has-error' : '' }}">
                             <label for="fullname" class="col-md-4 control-label">Full Name:</label>
@@ -135,6 +151,19 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="approved" class="col-md-4 control-label">Approve Application:</label>
+
+                            <div class="col-md-6">
+                              <input type="hidden" name="approved" value="0">
+                              <input name="approved" type="checkbox" value="1">
+
+                            </div>
+                        </div>
+
+
+
+
                         <div class="form-group{{ $errors->has('signed') ? ' has-error' : '' }}">
                             <label for="signed" class="col-md-4 control-label">Type Full Name For Signature:</label>
 
@@ -161,7 +190,10 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group">
+<input name="pilgrimID" type="hidden" value="{{$pilgrim_info->pilgrim_id}}">
+<input name="sponsorID" type="hidden" value="{{$sponsor_info->sponsor_id}}">
+
+             <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Submit
