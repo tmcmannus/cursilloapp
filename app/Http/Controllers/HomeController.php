@@ -25,16 +25,5 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // Collection of Sponsor/Pilgrim pairs
-        $sponsor_pilgrim_pairs = DB::table('pilgrim_info')
-            ->join('sponsor_info', 'pilgrim_info.sponsor_id', '=', 'sponsor_info.sponsor_id')
-            ->select('pilgrim_info.pilgrim_id',
-                'pilgrim_info.fullname as PI_fullname',
-                'sponsor_info.sponsor_id as sponsor_id',
-                'sponsor_info.fullname as SP_fullname'
-            )
-            ->get();
-
-        return view('pastor/pastordashboard')->with(compact('sponsor_pilgrim_pairs'));
     }
 }

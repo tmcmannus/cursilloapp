@@ -63,6 +63,6 @@ class Kernel extends HttpKernel
         'pastorappsuccess' => \App\Http\Middleware\PastorMiddleware::class,
         'pilgrimappsuccess' => \App\Http\Middleware\PilgrimMiddleware::class,
         'sponsorappsuccess' =>\App\Http\Middleware\SponsorMiddleware::class,
-
+        'registrar' => \App\Http\Middleware\RegistrarMiddleware::class,
     ];
 }

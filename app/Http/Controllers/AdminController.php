@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ADminController extends Controller
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,4 +25,9 @@ class ADminController extends Controller
     {
         return view('admin');
     }
+
+
+
+
+
 }

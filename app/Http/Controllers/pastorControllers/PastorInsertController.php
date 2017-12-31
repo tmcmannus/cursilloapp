@@ -26,7 +26,12 @@ class PastorInsertController extends BaseController
       $goodcandidateexplanation = $req->input('goodcandidateexplanation');
       $signed = $req->input('signed');
       $date = $req->input('date');
-      $pilgrim_id = $req->input('pilgrim');
+      $approved = $req->input('approved');
+      $pilgrim_id = $req->input('pilgrimID');
+      $sponsor_id = $req->input('sponsorID');
+
+
+
 
 
       $data = array(
@@ -41,7 +46,9 @@ class PastorInsertController extends BaseController
         'goodcandidateexplanation'=>$goodcandidateexplanation,
         'signed'=>$signed,
         'date'=>$date,
-        'pilgrim_id'=>$pilgrim_id
+        'approved'=>$approved,
+        'pilgrim_id'=>$pilgrim_id,
+        'sponsor_id'=>$sponsor_id
 
       );
       $id = DB::table('pastor_info')->insertGetId($data);

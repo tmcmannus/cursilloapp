@@ -11,10 +11,10 @@ class pastorApproval extends Controller
 
 
 
-    public function pastorappsuccess (Request $request, $pastor_id)
+    public function applicationApprove (Request $request, $pastor_id)
 {
 
-    $print_data = DB::table('pastor_info')
+    $print_data = DB::table('pastor_info', 'pastor_info.sponsor_id', '=', 'sponsor_info.sponsor_id')
         ->join('pilgrim_info', 'pastor_info.pilgrim_id', '=', 'pilgrim_info.pilgrim_id')
         ->join('sponsor_info', 'pilgrim_info.sponsor_id', '=', 'sponsor_info.sponsor_id')
 
@@ -77,7 +77,7 @@ class pastorApproval extends Controller
         'pastor_info.date as PA_date')
         ->first();
 
-    return view('pastor/pastorappsuccess')->with(compact('print_data'));
+    return view('admin/applicationdashboard')->with(compact('print_data'));
 }
 
 }
