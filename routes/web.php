@@ -19,7 +19,7 @@ Auth::routes();
 
 //Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
-Route::get('admin','registrarControllers\RegistrarController@RegistrarPilgrimList')->middleware('registrar');
+Route::get('/admin','registrarControllers\RegistrarController@RegistrarPilgrimList')->middleware('registrar');
 
 
 Route::prefix('admin')->group(function() {
