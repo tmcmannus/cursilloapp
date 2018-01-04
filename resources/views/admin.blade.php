@@ -11,7 +11,7 @@
 
                   @foreach($reg_pairs as $pair)
                       <div class="pair">
-                          <a href="/admin/applicationreport?pilgrim_id={{$pair->pilgrim_id}}">{{$pair->PI_fullname}}</a>
+                          <a href="/admin/applicationreport?pilgrim_id={{$pair->PI_ID}}">{{$pair->PI_fullname}}</a>
                       </div>
                   @endforeach
                 </div>
