@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class AdminController extends Controller
 {
     /**
@@ -23,7 +23,15 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin');
+      //  return view('admin');
+      $reg_pairs = DB::table('pilgrim_info')
+      ->join('pastor_info', 'pilgrim_info.pilgrim_id', '=', 'pastor_info.pilgrim_id')
+      ->select('pilgrim_info.pilgrim_id as PI_ID',
+           'pilgrim_info.fullname as PI_fullname'
+           )
+      ->where('pastor_info.approved', '=', 1)
+           ->get();
+            return view('/admin')->with(compact('reg_pairs'));
     }
 
 

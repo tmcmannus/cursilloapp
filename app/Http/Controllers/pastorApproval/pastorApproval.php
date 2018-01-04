@@ -25,7 +25,7 @@ class pastorApproval extends Controller
         'pilgrim_info.address as PI_address',
         'pilgrim_info.city as PI_city',
         'pilgrim_info.state as PI_state',
-        'pilgrim_info.zip as PI_zip'
+        'pilgrim_info.zip as PI_zip',
         'pilgrim_info.phone as PI_phone',
         'pilgrim_info.bestcalltime as PI_bestcalltime',
         'pilgrim_info.email as PI_email',

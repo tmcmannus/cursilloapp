@@ -41,7 +41,7 @@ class LoginController extends Controller
                 return 'pastor/pastordashboard';
 
             default:
-                return '/login';
+                return '/';
         }
     }
 
