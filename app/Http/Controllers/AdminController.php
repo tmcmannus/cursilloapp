@@ -34,7 +34,25 @@ class AdminController extends Controller
             return view('/admin')->with(compact('reg_pairs'));
     }
 
+    public function printApplication (Request $request)
+    {
+        $pilgrim_id = $request->query('pilgrim_id');
 
+        $application_info = DB::table('pilgrim_info')
+        ->join('pastor_info', 'pastor_info.pilgrim_id', '=', 'pilgrim_info.pilgrim_id')
+        ->join('sponsor_info', 'sponsor_info.sponsor_id', '=', 'pastor_info.sponsor_id')
+        ->select('pilgrim_info.fullname as PI_fullname',
+                 'pilgrim_info.address as PI_address',
+                 'pilgrim_info.city as PI_city',
+                 'pilgrim_info.state as PI_state',
+                 'pilgrim_info.zip as PI_zip')
+      //  ->where('pilgrim_id', $pilgrim_id)
+            ->first();
+
+
+        return view('admin/applicationreport')->with(compact('application_info'));
+
+    }
 
 
 

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'LCSocal'),
+    'name' => env('APP_NAME', 'Lutheran Cursillo of Southern California'),
 
     /*
     |--------------------------------------------------------------------------
