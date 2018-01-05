@@ -218,6 +218,7 @@
                                     </span>
                                 @endif
                             </div>
+                          </div>
                             <div class="form-group{{ $errors->has('plantosupport') ? ' has-error' : '' }}">
                                 <label for="plantosupport" class="col-md-4 control-label">How, Specifically, Will You Supoprt This Applicant During His/Her Fourth Day?:</label>
 
@@ -229,7 +230,19 @@
                                         </span>
                                     @endif
                                 </div>
-                      
+                              </div>
+                              <div class="form-group{{ $errors->has('otherapplicantinfo') ? ' has-error' : '' }}">
+                                  <label for="otherapplicantinfo" class="col-md-4 control-label">Other Pertinent Information About The Applicant?:</label>
+
+                                  <div class="col-md-6">
+                                      <textarea id="otherapplicantinfo" class="form-control" name="otherapplicantinfo" cols="50" rows="5" required></textarea>
+                                      @if ($errors->has('otherapplicantinfo'))
+                                          <span class="help-block">
+                                              <strong>{{ $errors->first('otherapplicantinfo') }}</strong>
+                                          </span>
+                                      @endif
+                                  </div>
+                                </div>
                         <div class="col-lg-12 pleasenote">
                           <p>I/We have prayerfully considered sponsoring this applicant, understand my/our
                           responsibilities as outlined in the sponsor's guidelines, and with the Lord's help will do

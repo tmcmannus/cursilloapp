@@ -65,7 +65,7 @@
                             </div>
                         </div>
 
-                        
+
                         <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                             <label for="address" class="col-md-4 control-label">Address:</label>
 
@@ -304,11 +304,12 @@
                               <label for="specialneeds" class="col-md-4 control-label">Special Needs:</label>
 
                               <div class="col-md-6">
-                                <input name="specialneeds" type="radio" value="allergies">
+                                <input name="specialneeds" type="radio" value="Allergies to Food (i.e. dairy, nuts,shellfish)">
                                 Allergies to Food (i.e. dairy, nuts,shellfish)<br>
-                                <input name="specialneeds" type="radio" value="medical">
+                                <input name="specialneeds" type="radio" value="Medical necessary Diets (i.e. vegetarian, no salt, diabetic, gluten free,etc...)">
                                 Medical necessary Diets (i.e. vegetarian, no salt, diabetic, gluten free,etc...)<br>
-                                <input name="specialneeds" type="radio" value="physical">
+                                <input name="specialneeds" type="radio" value="Medical / Physical Requirements (ie: cpap machine & plug, language or hearing assistance, medications at a
+                                specific time , mobility issues, wheelchair assistance, recent surgeries, hygiene assistance)">
                                 Medical / Physical Requirements (ie: cpap machine & plug, language or hearing assistance, medications at a
                                 specific time , mobility issues, wheelchair assistance, recent surgeries, hygiene assistance)
  <br>

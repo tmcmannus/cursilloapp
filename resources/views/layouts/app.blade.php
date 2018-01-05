@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="jumbotron text-center"><h1 style="font-size:75px;color:orange;">Lutheran Cursillo of Southern California</h1></div>
+        <div class="jumbotron text-center"><h1 class="headerh1">Lutheran Cursillo of Southern California</h1></div>
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">

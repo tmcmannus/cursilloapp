@@ -3,6 +3,11 @@
 	height:300px;
 	width:100%;
 }
+h1.headerh1
+{
+font-size:75px;
+color:orange;
+}
 
 .dashboard{
 	margin-top:75px;
@@ -111,4 +116,110 @@ text-align:justify;
 	width:600px;
 	margin:0 auto;
 	font-weight:bold;
+}
+
+
+.report-main {
+	width:50%;
+	margin-top:40px;
+
+}
+
+.reportinput {
+	width:80%;
+	 margin-top:40px;
+
+
+}
+h1.printpage
+{
+	font-size:3em;
+	font-weight:700;
+	padding:0;
+	margin:0;
+	color:#000;
+}
+
+h2.printpage
+{
+	font-size:2em;
+	font-weight:700;
+	padding:0;
+	margin:0;
+}
+
+.required
+{
+	width:90%;
+	border:5px solid #000;
+	margin:0 auto;
+	margin-top:20px;
+	padding:10px;
+}
+
+h3.requiredbold {
+	font-size:14px;
+	font-weight:bold;
+	text-align:left;
+	margin:0;
+	color:#000;
+}
+
+label{
+	font-size:18px;
+	color:#999;
+}
+.rowborder{
+	border:1px solid #b2babb;
+
+}
+
+.rowspan{
+	height:50px;
+}
+.data {
+	font-size:18px;
+	font-weight:900;
+	color:#000;
+}
+/************************************  Print CSS ******************************/
+@media print {
+body {
+	background-color: #FFFFFF;
+}
+
+jumbotron {
+	display:none;
+}
+h1.headerh1
+{
+display:none;
+}
+div#report-main {
+	width:100%;
+	border:none;
+	margin-top:0;
+}
+
+h1.printpage {
+	font-size:16pt;
+
+}
+
+h2 {
+	font-size:14pt;
+}
+h3 {
+	font-size:12pt;
+}
+
+h3.requiredbold{
+	font-size:10pt;
+	font-weight:900;
+	text-align:left;
+}
+.navbar{
+	display:none;
+}
+
 }
