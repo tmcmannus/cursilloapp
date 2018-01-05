@@ -46,6 +46,7 @@ class AdminController extends Controller
                 //Select Pilgrim Information Based on pilgrim_id
                  'pilgrim_info.fullname as PI_fullname',
                  'pilgrim_info.address as PI_address',
+                 'pilgrim_info.aptsuite as PI_aptsuite',
                  'pilgrim_info.city as PI_city',
                  'pilgrim_info.state as PI_state',
                  'pilgrim_info.zip as PI_zip',
@@ -100,7 +101,7 @@ class AdminController extends Controller
                 'pastor_info.goodcandidateexplanation as PA_goodcandidateexplanation',
                 'pastor_info.signed as PA_signed',
                 'pastor_info.date as PA_date')
-    //  ->where('pilgrim_id', $pilgrim_id)
+            ->where('pilgrim_info.pilgrim_id', $pilgrim_id)
             ->first();
 
 
