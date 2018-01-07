@@ -15,8 +15,9 @@ class SponsorApp extends Controller
 
     public function sponsorappsuccess (Request $request, $sponsorId)
     {
-       $sponsorInfo = DB::table('sponsor_info')->where('sponsor_info.sponsor_id', $sponsorId)->first();
 
+   
+       $sponsorInfo = DB::table('sponsor_info')->where('sponsor_info.sponsor_id', $sponsorId)->first();
        return view('sponsor/sponsorappsuccess')->with(compact('sponsorInfo'));
 
     }
