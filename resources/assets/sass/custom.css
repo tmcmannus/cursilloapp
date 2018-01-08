@@ -120,7 +120,7 @@ text-align:justify;
 
 
 .report-main {
-	width:50%;
+	width:90%;
 	margin-top:40px;
 
 }
@@ -128,8 +128,6 @@ text-align:justify;
 .reportinput {
 	width:80%;
 	 margin-top:40px;
-
-
 }
 h1.printpage
 {
@@ -181,45 +179,4 @@ label{
 	font-size:18px;
 	font-weight:900;
 	color:#000;
-}
-/************************************  Print CSS ******************************/
-@media print {
-body {
-	background-color: #FFFFFF;
-}
-
-jumbotron {
-	display:none;
-}
-h1.headerh1
-{
-display:none;
-}
-div#report-main {
-	width:100%;
-	border:none;
-	margin-top:0;
-}
-
-h1.printpage {
-	font-size:16pt;
-
-}
-
-h2 {
-	font-size:14pt;
-}
-h3 {
-	font-size:12pt;
-}
-
-h3.requiredbold{
-	font-size:10pt;
-	font-weight:900;
-	text-align:left;
-}
-.navbar{
-	display:none;
-}
-
 }

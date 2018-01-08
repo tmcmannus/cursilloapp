@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.print')
+
 
 @section('content')
+
 
 <div class="container report-main">
   <div class="row">
