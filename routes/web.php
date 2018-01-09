@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
+
+
 Auth::routes();
 
 //Route::get('/dashboard', 'HomeController@index')->name('dashboard');
@@ -28,6 +30,7 @@ Route::prefix('admin')->group(function() {
  Route::get('/', 'AdminController@index')->name('admin.dashboard');
  Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
  Route::get('/applicationreport', 'AdminController@printApplication');
+ Route::get('/applicationreportprint', 'AdminController@printViewApplication');
 
 
 // Password reset routes
@@ -36,7 +39,7 @@ Route::prefix('admin')->group(function() {
   Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset');
   Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
 });
-
+Route::get('/delete/{pilrgim_id}','AdminController@delete');
 
 //Routes for Inserting into pilgrimr_info table
 Route::prefix('')->group(function() {
