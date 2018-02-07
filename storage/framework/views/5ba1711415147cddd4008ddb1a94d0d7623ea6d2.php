@@ -128,6 +128,32 @@
                                 <?php endif; ?>
                             </div>
                         </div>
+                        <div class="form-group<?php echo e($errors->has('applicantname') ? ' has-error' : ''); ?>">
+                            <label for="applicantpastorname" class="col-md-4 control-label">Applicant Pastor Name:</label>
+
+                            <div class="col-md-6">
+                                <input id="applicantpastorname" type="text" class="form-control" name="applicantpastorname" value="<?php echo e(old('applicantpastorname')); ?>" required>
+
+                                <?php if($errors->has('applicantpastorname')): ?>
+                                    <span class="help-block">
+                                        <strong><?php echo e($errors->first('applicantpastorname')); ?></strong>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
+                            <label for="applicantpastoremail" class="col-md-4 control-label">Applicant Pastor Email:</label>
+
+                            <div class="col-md-6">
+                                <input id="applicantpastoremail" type="email" class="form-control" name="applicantpastoremail" required>
+
+                                <?php if($errors->has('applicantpastoremail')): ?>
+                                    <span class="help-block">
+                                        <strong><?php echo e($errors->first('applicantpastoremail')); ?></strong>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
                         <div class="form-group<?php echo e($errors->has('baptizedlutheran') ? ' has-error' : ''); ?>">
                             <label for="baptizedlutheran" class="col-md-4 control-label">Baptized Lutheran:</label>
 
@@ -143,7 +169,7 @@
                             </div>
                         </div>
                         <div class="form-group<?php echo e($errors->has('hadcursillospousediscussion') ? ' has-error' : ''); ?>">
-                            <label for="hadcursillospousediscussion" class="col-md-4 control-label">Did You Discuss Cursillo With The Applicant's Spouse:</label>
+                            <label for="hadcursillospousediscussion" class="col-md-4 control-label">Did You Discuss Cursillo With The Applicant's Spouse<span style="color:blue;font-size:12px;">(If Applicable)</span>:</label>
 
                             <div class="col-md-6">
                               <input name="hadcursillospousediscussion" type="radio" value="yes"> Yes<br>
@@ -157,7 +183,7 @@
                             </div>
                         </div>
                         <div class="form-group<?php echo e($errors->has('bothspousesattending') ? ' has-error' : ''); ?>">
-                            <label for="bothspousesattending" class="col-md-4 control-label">Both Spouses Attending:</label>
+                            <label for="bothspousesattending" class="col-md-4 control-label">Both Spouses Attending<span style="color:blue;font-size:12px;">(If Applicable)</span>:</label>
 
                             <div class="col-md-6">
                               <input name="bothspousesattending" type="radio" value="yes"> Yes<br>

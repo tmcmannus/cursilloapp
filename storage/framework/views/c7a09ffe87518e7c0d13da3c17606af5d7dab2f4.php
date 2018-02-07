@@ -81,10 +81,10 @@
                         </div>
 
                         <div class="form-group<?php echo e($errors->has('aptsuite') ? ' has-error' : ''); ?>">
-                            <label for="aptsuite" class="col-md-4 control-label">Apt/Suite:</label>
+                            <label for="aptsuite" class="col-md-4 control-label">Apt/Suite <span style="color:blue;font-size:12px;">(If Applicable)</span>:</label>
 
                             <div class="col-md-6">
-                                <input id="aptsuite" type="text" class="form-control" name="aptsuite" value="<?php echo e(old('aptsuite')); ?>" required autofocus>
+                                <input id="aptsuite" type="text" class="form-control" name="aptsuite" value="<?php echo e(old('aptsuite')); ?>" autofocus>
 
                                 <?php if($errors->has('aptsuite')): ?>
                                     <span class="help-block">
@@ -230,10 +230,10 @@
                             </div>
                         </div>
                         <div class="form-group<?php echo e($errors->has('marriagepartner') ? ' has-error' : ''); ?>">
-                            <label for="marriagepartner" class="col-md-4 control-label">Spouse's Name:</label>
+                            <label for="marriagepartner" class="col-md-4 control-label">Spouse's Name<span style="color:blue;font-size:12px;">(If Applicable)</span>:</label>
 
                             <div class="col-md-6">
-                                <input id="marriagepartner" type="text" class="form-control" name="marriagepartner" required>
+                                <input id="marriagepartner" type="text" class="form-control" name="marriagepartner">
 
                                 <?php if($errors->has('marriagepartner')): ?>
                                     <span class="help-block">
@@ -277,6 +277,19 @@
                                 <?php if($errors->has('homechurchpastor')): ?>
                                     <span class="help-block">
                                         <strong><?php echo e($errors->first('homechurchpastor')); ?></strong>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="form-group<?php echo e($errors->has('homechurchpastoremail') ? ' has-error' : ''); ?>">
+                            <label for="homechurchpastoremail" class="col-md-4 control-label">Pastor Email:</label>
+
+                            <div class="col-md-6">
+                                <input id="homechurchpastoremail" type="email" class="form-control" name="homechurchpastoremail" required>
+
+                                <?php if($errors->has('homechurchpastoremail')): ?>
+                                    <span class="help-block">
+                                        <strong><?php echo e($errors->first('homechurchpastoremail')); ?></strong>
                                     </span>
                                 <?php endif; ?>
                             </div>

@@ -15,13 +15,11 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-
-
 Auth::routes();
 
 //Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
-Route::get('/admin','registrarControllers\RegistrarController@RegistrarPilgrimList')->middleware('registrar');
+Route::get('admin','registrarControllers\RegistrarController@RegistrarPilgrimList')->middleware('registrar');
 
 
 Route::prefix('admin')->group(function() {
@@ -32,17 +30,17 @@ Route::prefix('admin')->group(function() {
  Route::get('/applicationreport', 'AdminController@printApplication');
  Route::get('/applicationreportprint', 'AdminController@printViewApplication');
 
-
 // Password reset routes
   Route::post('/password/email', 'Auth\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
   Route::get('/password/reset', 'Auth\AdminForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
   Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset');
   Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
 });
-Route::get('/delete/{pilrgim_id}','AdminController@delete');
+
 
 //Routes for Inserting into pilgrimr_info table
 Route::prefix('')->group(function() {
+  Route::get('/pilgrim/pilgrim-dashboard','pilgrimControllers\PilgrimApp@pilgrimdashboard');
   Route::get('pilgrim/pilgrimapp', 'pilgrimControllers\PilgrimApp@pilgrimapp')->middleware('pilgrim');
   Route::post('pilgrim/insert','pilgrimControllers\PilgrimInsertController@insert')->middleware('pilgrim');
   Route::get('pilgrim/pilgrimappsuccess/{sponsorId}','pilgrimControllers\PilgrimApp@pilgrimappsuccess')->middleware('pilgrimappsuccess');
@@ -51,6 +49,7 @@ Route::prefix('')->group(function() {
 
 //Routes for Inserting into sponsor_info table
 Route::prefix('')->group(function() {
+  Route::get('/sponsor/sponsor-dashboard','sponsorControllers\SponsorApp@sponsordashboard');
   Route::get('sponsor/sponsorapp', 'sponsorControllers\SponsorApp@sponsorapp')->middleware('sponsor');
   Route::post('sponsor/insert','sponsorControllers\SponsorInsertController@insert')->middleware('sponsor');
   Route::get('sponsor/sponsorappsuccess','sponsorControllers\SponsorApp@sponsorappsuccess')->middleware('sponsorappsuccess');

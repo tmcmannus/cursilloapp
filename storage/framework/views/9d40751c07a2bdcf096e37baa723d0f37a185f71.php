@@ -6,12 +6,13 @@
                 <div class="panel-heading">ADMIN Dashboard</div>
 
                 <div class="panel-body">
-
+                  <ul>
                   <?php $__currentLoopData = $reg_pairs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pair): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                      <div class="pair">
-                          <a href="/admin/applicationreport?pilgrim_id=<?php echo e($pair->PI_ID); ?>"><?php echo e($pair->PI_fullname); ?></a>
-                      </div>
+                         <h3 style="font-size:18px;font-weight:bold;">Approved Applications</h3>
+                        <li style="list-style:none">  <a href="/admin/applicationreport?pilgrim_id=<?php echo e($pair->PI_ID); ?>"><?php echo e($pair->PI_fullname); ?></a></li>
+
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </ul>
                 </div>
             </div>
         </div>
