@@ -32,6 +32,7 @@ class PilgrimInsertController extends BaseController
       $homechurch = $req->input('homechurch');
       $homechurchcity = $req->input('homechurchcity');
       $homechurchpastor = $req->input('homechurchpastor');
+      $homechurchpastoremail = $req->input('homechurchpastoremail');
       $homechurchattendance = $req->input('homechurchattendance');
       $specialneeds = $req->input('specialneeds');
       $reasontoattend = $req->input('reasontoattend');
@@ -59,6 +60,7 @@ class PilgrimInsertController extends BaseController
         'homechurch'=>$homechurch,
         'homechurchcity'=>$homechurchcity,
         'homechurchpastor'=>$homechurchpastor,
+        'homechurchpastoremail'=>$homechurchpastoremail,
         'homechurchattendance'=>$homechurchattendance,
         'specialneeds'=>$specialneeds,
         'reasontoattend'=>$reasontoattend,

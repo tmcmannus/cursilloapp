@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 use DB;
 class SponsorApp extends Controller
 {
+
+  public function sponsordashboard() {
+
+
+      return view('sponsor/sponsor-dashboard');
+}
+
+
     public function sponsorapp ()
     {
        return view('sponsor/sponsorapp');
@@ -15,9 +23,8 @@ class SponsorApp extends Controller
 
     public function sponsorappsuccess (Request $request, $sponsorId)
     {
-
-   
        $sponsorInfo = DB::table('sponsor_info')->where('sponsor_info.sponsor_id', $sponsorId)->first();
+
        return view('sponsor/sponsorappsuccess')->with(compact('sponsorInfo'));
 
     }

@@ -24,6 +24,8 @@ class SponsorInsertController extends BaseController
       $email = $req->input('email');
       $bestcalltime = $req->input('bestcalltime');
       $applicantname = $req->input('applicantname');
+      $applicantpastorname = $req->input('applicantpastorname');
+      $applicantpastoremail = $req->input('applicantpastoremail');
       $baptizedlutheran = $req->input('baptizedlutheran');
       $hadcursillospousediscussion = $req->input('hadcursillospousediscussion');
       $bothspousesattending = $req->input('bothspousesattending');
@@ -37,7 +39,6 @@ class SponsorInsertController extends BaseController
       $datesigned = $req->input('datesigned');
 
 
-
       $data = array(
         'fullname'=>$fullname,
         'address'=>$address,
@@ -48,6 +49,8 @@ class SponsorInsertController extends BaseController
         'email'=>$email,
         'bestcalltime'=>$bestcalltime,
         'applicantname'=>$applicantname,
+        'applicantpastorname'=>$applicantpastorname,
+        'applicantpastoremail'=>$applicantpastoremail,
         'baptizedlutheran' =>$baptizedlutheran,
         'hadcursillospousediscussion' =>$hadcursillospousediscussion,
         'bothspousesattending' =>$bothspousesattending,
@@ -59,7 +62,6 @@ class SponsorInsertController extends BaseController
         'applicantexpectations' =>$applicantexpectations,
         'signed'=>$signed,
         'datesigned'=>$datesigned
-
       );
       $Sid = DB::table('sponsor_info')->insertGetId($data);
         return redirect("sponsor/sponsorappsuccess/{$Sid}");

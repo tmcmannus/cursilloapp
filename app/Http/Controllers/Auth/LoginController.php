@@ -34,9 +34,9 @@ class LoginController extends Controller
         $userRole = Auth::user()->role;
         switch ($userRole) {
             case 'pilgrim':
-                return 'pilgrim/pilgrimapp';
+                return 'pilgrim/pilgrim-dashboard';
             case 'sponsor':
-                return 'sponsor/sponsorapp';
+                return 'sponsor/sponsor-dashboard';
             case 'pastor':
                 return 'pastor/pastordashboard';
 
