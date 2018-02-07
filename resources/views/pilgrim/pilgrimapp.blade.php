@@ -81,10 +81,10 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('aptsuite') ? ' has-error' : '' }}">
-                            <label for="aptsuite" class="col-md-4 control-label">Apt/Suite:</label>
+                            <label for="aptsuite" class="col-md-4 control-label">Apt/Suite <span style="color:blue;font-size:12px;">(If Applicable)</span>:</label>
 
                             <div class="col-md-6">
-                                <input id="aptsuite" type="text" class="form-control" name="aptsuite" value="{{ old('aptsuite') }}" required autofocus>
+                                <input id="aptsuite" type="text" class="form-control" name="aptsuite" value="{{ old('aptsuite') }}" autofocus>
 
                                 @if ($errors->has('aptsuite'))
                                     <span class="help-block">
@@ -230,10 +230,10 @@
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('marriagepartner') ? ' has-error' : '' }}">
-                            <label for="marriagepartner" class="col-md-4 control-label">Spouse's Name:</label>
+                            <label for="marriagepartner" class="col-md-4 control-label">Spouse's Name<span style="color:blue;font-size:12px;">(If Applicable)</span>:</label>
 
                             <div class="col-md-6">
-                                <input id="marriagepartner" type="text" class="form-control" name="marriagepartner" required>
+                                <input id="marriagepartner" type="text" class="form-control" name="marriagepartner">
 
                                 @if ($errors->has('marriagepartner'))
                                     <span class="help-block">
@@ -277,6 +277,19 @@
                                 @if ($errors->has('homechurchpastor'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('homechurchpastor') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('homechurchpastoremail') ? ' has-error' : '' }}">
+                            <label for="homechurchpastoremail" class="col-md-4 control-label">Pastor Email:</label>
+
+                            <div class="col-md-6">
+                                <input id="homechurchpastoremail" type="email" class="form-control" name="homechurchpastoremail" required>
+
+                                @if ($errors->has('homechurchpastoremail'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('homechurchpastoremail') }}</strong>
                                     </span>
                                 @endif
                             </div>

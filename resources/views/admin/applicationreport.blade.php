@@ -78,7 +78,7 @@
     <div class="col-md-6 rowborder"><label>Applicant Signature:<span class="data"> {{ $application_info->PI_signed}}</span></label></div>
     <div class="col-md-6 rowborder"><label>Date Signed: <span class="data">{{ $application_info->PI_datesigned}}</span></label></div>
 </div>
-<div class="row break">
+<div class="row">
   <div class="col-lg-12 text-center rowborder"><h2><strong>PASTOR INFORMATION</strong></h2></div>
 </div>
 <div class="row">

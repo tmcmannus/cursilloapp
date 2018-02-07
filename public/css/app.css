@@ -8517,7 +8517,7 @@ h1.headerh1 {
 }
 
 .report-main {
-  width: 90%;
+  width: 50%;
   margin-top: 40px;
 }
 
@@ -8580,55 +8580,43 @@ label {
 
 @media print {
   body {
-    background-color: yellow;
+    background-color: #FFFFFF;
   }
 
-@page {
-    size: portrait;
-    size: A4;
-    /* auto is the initial value */
-    margin: 3mm;
-    /* this affects the margin in the printer settings */
-}
-
-  .report-main {
-    width: 100% !important;
-    margin: 0 auto;
-  }
-
-  .required {
+  jumbotron {
     display: none;
   }
 
-  .break {
-    page-break-before: always;
+  h1.headerh1 {
+    display: none;
   }
 
-  .jumbotron {
-    display: none !important;
-  }
-
-  .navbar {
-    display: none !important;
+  div#report-main {
+    width: 100%;
+    border: none;
+    margin-top: 0;
   }
 
   h1.printpage {
-    font-size: 2em !important;
-    font-weight: 700 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    color: #000 !important;
+    font-size: 16pt;
   }
 
-  label {
-    font-weight: normal !important;
+  h2 {
+    font-size: 14pt;
   }
 
-  h2.printpage {
-    font-size: 1em !important;
-    font-weight: 700 !important;
-    padding: 0 !important;
-    margin: 0 !important;
+  h3 {
+    font-size: 12pt;
+  }
+
+  h3.requiredbold {
+    font-size: 10pt;
+    font-weight: 900;
+    text-align: left;
+  }
+
+  .navbar {
+    display: none;
   }
 }
 
